@@ -13,14 +13,7 @@ export default function (options = {}) {
       }
       const compiled = Hogan.compile(template, {asString: 1})
       const code = preamble + `export default new Hogan.Template(${compiled});`
-      const ast = {
-        type: 'Program',
-        sourceType: 'module',
-        start: 0,
-        end: null,
-        body: []
-      }
-      return {ast, code, map: {mappings: ''}}
+      return {code, map: {mappings: ''}}
     }
   }
 }
