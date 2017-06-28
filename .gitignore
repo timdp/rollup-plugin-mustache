@@ -1,7 +1,8 @@
 [Tt]humbs.db
 .DS_Store
 npm-debug.log
-
-/node_modules/
+node_modules/
+test-results.xml
+coverage/
+.nyc_output/
 /lib/
-/coverage/

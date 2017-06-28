@@ -15,39 +15,39 @@
     "index.js"
   ],
   "scripts": {
-    "clean": "gulp clean",
-    "build": "gulp build",
     "prepublish": "in-publish && npm run build || not-in-publish",
-    "test": "gulp test"
+    "clean": "rimraf lib",
+    "build": "npm run clean && babel src --out-dir lib",
+    "test": "npm run test:lint && npm run test:cover",
+    "test:lint": "standard",
+    "test:unit": "mocha --compilers js:babel-register test/lib/setup.js test/**/*.spec.js",
+    "test:cover": "nyc npm run test:unit",
+    "test:ci": "npm run test:ci:cover && npm run test:ci:report",
+    "test:ci:cover": "nyc mocha --reporter mocha-junit-reporter --compilers js:babel-register test/lib/setup.js test/**/*.spec.js",
+    "test:ci:report": "nyc report --reporter text-lcov | coveralls",
+    "dev": "babel src --out-dir lib --watch"
   },
   "repository": "timdp/rollup-plugin-mustache",
   "bugs": "https://github.com/timdp/rollup-plugin-mustache/issues",
   "dependencies": {
+    "babel-runtime": "^6.23.0",
     "hogan.js": "^3.0.2",
-    "rollup-pluginutils": "^1.5.2"
+    "rollup-pluginutils": "^2.0.1"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.18.0",
-    "babel-register": "^6.18.0",
-    "chai": "^3.5.0",
-    "chai-as-promised": "^6.0.0",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-coveralls": "^0.1.4",
-    "gulp-istanbul": "^1.1.1",
-    "gulp-load-plugins": "^1.4.0",
-    "gulp-mocha": "^3.0.1",
-    "gulp-sourcemaps": "^2.2.0",
-    "gulp-standard": "^8.0.2",
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-register": "^6.24.1",
+    "coveralls": "^2.13.1",
     "in-publish": "^2.0.0",
-    "isparta": "^4.0.0",
-    "mocha-junit-reporter": "^1.12.1",
-    "run-sequence": "^1.2.2",
-    "sinon": "^1.17.6",
-    "sinon-chai": "^2.8.0",
-    "standard": "^8.5.0",
-    "yargs": "^6.3.0"
+    "mocha-junit-reporter": "^1.13.0",
+    "nyc": "^11.0.3",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.43.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "standard": "^10.0.2",
+    "temp": "^0.8.3"
   },
   "standard": {
     "globals": [

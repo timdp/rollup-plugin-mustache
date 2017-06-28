@@ -1,6 +1,6 @@
 # rollup-plugin-mustache
 
-[![npm](https://img.shields.io/npm/v/rollup-plugin-mustache.svg)](https://www.npmjs.com/package/rollup-plugin-mustache) [![Dependencies](https://img.shields.io/david/timdp/rollup-plugin-mustache.svg)](https://david-dm.org/timdp/rollup-plugin-mustache) [![Build Status](https://img.shields.io/travis/timdp/rollup-plugin-mustache/master.svg)](https://travis-ci.org/timdp/rollup-plugin-mustache) [![Coverage Status](https://img.shields.io/coveralls/timdp/rollup-plugin-mustache/master.svg)](https://coveralls.io/r/timdp/rollup-plugin-mustache) [![JavaScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![npm](https://img.shields.io/npm/v/rollup-plugin-mustache.svg)](https://www.npmjs.com/package/rollup-plugin-mustache) [![Dependencies](https://img.shields.io/david/timdp/rollup-plugin-mustache.svg)](https://david-dm.org/timdp/rollup-plugin-mustache) [![Build Status](https://img.shields.io/circleci/project/github/timdp/rollup-plugin-mustache/master.svg?label=build)](https://circleci.com/gh/timdp/rollup-plugin-mustache) [![Coverage Status](https://img.shields.io/coveralls/timdp/rollup-plugin-mustache/master.svg)](https://coveralls.io/r/timdp/rollup-plugin-mustache) [![JavaScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Precompiles [Mustache](https://mustache.github.io/) templates using
 [Hogan.js](http://twitter.github.io/hogan.js/).
