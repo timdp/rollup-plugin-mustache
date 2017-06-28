@@ -17,6 +17,7 @@ First, configure Rollup:
 
 ```js
 import mustache from 'rollup-plugin-mustache'
+import commonjs from 'rollup-plugin-commonjs'
 
 export default {
   entry: 'src/index.js',
@@ -25,7 +26,8 @@ export default {
     // ... other plugins here ...
     mustache({
       include: '**/*.mustache'
-    })
+    }),
+    commonjs() // Needed to import Hogan.js
   ]
 }
 ```
@@ -46,7 +48,7 @@ console.log(html)
 
 ### `hoganKey`
 
-By default, this plugin will inject Hogan.js into your build. If you already
+By default, this plugin will import Hogan.js into your build. If you already
 have it imported some other way, you should most likely override the `hoganKey`
 option with just `'hogan.js'` and let Rollup resolve it. Alternatively, you can
 specify the full path to the main file.
