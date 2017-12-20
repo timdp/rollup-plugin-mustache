@@ -42,7 +42,7 @@
     "coveralls": "^2.13.1",
     "in-publish": "^2.0.0",
     "mocha-junit-reporter": "^1.13.0",
-    "nyc": "^11.0.3",
+    "nyc": "11.4.0",
     "rimraf": "^2.6.1",
     "rollup": "^0.43.0",
     "rollup-plugin-commonjs": "^8.0.2",
