@@ -41,7 +41,7 @@
     "babel-register": "^6.24.1",
     "coveralls": "^2.13.1",
     "in-publish": "^2.0.0",
-    "mocha-junit-reporter": "^1.13.0",
+    "mocha-junit-reporter": "^1.22.0",
     "nyc": "^11.0.3",
     "rimraf": "^2.6.1",
     "rollup": "^0.43.0",
